@@ -4,7 +4,7 @@
 
 Proof of Concept to demonstrate Angular framework use. This app consumes COVID-19 api (https://api.covid19api.com/) and show some data in dashboards.
 
-Here are some topics was used in the project
+Here are some topics was used in the project:
 
 - Pipes
 - CanLoad
