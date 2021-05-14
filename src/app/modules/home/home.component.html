@@ -1,0 +1,69 @@
+<mat-card class="card">
+    <mat-card-title>
+        Hey!
+    </mat-card-title>
+    <mat-card-content>
+        <p>You are logged in :)</p>
+        <span class="material-icons red">coronavirus</span>
+    </mat-card-content>
+</mat-card>
+
+<mat-grid-list cols="3" rowHeight="6:2" *ngIf="summary">
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>Confirmed</mat-card-title>
+            <mat-card-content>
+                <div>
+                    {{ summary.Global.TotalConfirmed | number }} Cases                   
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>Recovered</mat-card-title>
+            <mat-card-content>
+                <div>{{ summary.Global.TotalRecovered | number }} Recovered</div>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>Deaths</mat-card-title>
+            <mat-card-content>
+                <div>{{ summary.Global.TotalDeaths | number }} Deaths</div>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>New Confirmed</mat-card-title>
+            <mat-card-content>
+                <div>{{ summary.Global.NewConfirmed | number }} Cases</div>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>New Recovered</mat-card-title>
+            <mat-card-content>
+                <div>{{ summary.Global.NewRecovered | number }} Recovered</div>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>New Deaths</mat-card-title>
+            <mat-card-content>
+                <div>{{ summary.Global.NewDeaths | number }} Deaths</div>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+</mat-grid-list>

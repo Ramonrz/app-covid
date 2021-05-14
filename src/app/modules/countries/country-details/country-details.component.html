@@ -1,0 +1,74 @@
+<mat-card class="card">
+
+    <mat-card-title>
+        {{country?.Country}}
+    </mat-card-title>
+
+    <mat-card-content>
+
+        <i class="material-icons">outlined_flag</i>
+        <div *ngIf="!country">Country Not Found</div>
+
+        <mat-grid-list cols="3" rowHeight="6:2" *ngIf="country">
+
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-title>Confirmed</mat-card-title>
+                    <mat-card-content>
+                        <div>
+                            {{ country.TotalConfirmed | number }} Cases
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-title>Recovered</mat-card-title>
+                    <mat-card-content>
+                        <div>{{ country.TotalRecovered | number }} Recovered</div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-title>Deaths</mat-card-title>
+                    <mat-card-content>
+                        <div>{{ country.TotalDeaths | number }} Deaths</div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-title>New Confirmed</mat-card-title>
+                    <mat-card-content>
+                        <div>{{ country.NewConfirmed | number }} Cases</div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-title>New Recovered</mat-card-title>
+                    <mat-card-content>
+                        <div>{{ country.NewRecovered | number }} Recovered</div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-card>
+                    <mat-card-title>New Deaths</mat-card-title>
+                    <mat-card-content>
+                        <div>{{ country.NewDeaths | number }} Deaths</div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+    </mat-card-content>
+
+</mat-card>

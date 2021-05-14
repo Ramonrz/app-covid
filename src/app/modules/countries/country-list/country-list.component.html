@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-content>
+
+        <mat-form-field class="example-form-field">
+            <mat-label>Country</mat-label>
+            <input matInput type="text" #search>
+            <button mat-button *ngIf="search.value" matSuffix mat-icon-button aria-label="Clear" (click)="search.value = null">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-chip-list aria-label="Country selection">
+            <mat-chip *ngFor="let country of countries | orderBy: 'Country' | listFilter: search.value" (click)="onClick(country)">
+                {{country.Country}}
+            </mat-chip>
+        </mat-chip-list>
+
+    </mat-card-content>
+</mat-card>
