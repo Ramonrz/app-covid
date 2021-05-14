@@ -4,19 +4,18 @@
 
 Proof of Concept to demonstrate Angular framework use. This app consumes COVID-19 api (https://api.covid19api.com/) and show some data in dashboards.
 
+Here are some topics was used in the project
 
-> Here are some topics was used in the project
-
-Pipes
-CanLoad
-Use Hash
-CanActivate
-Lazy Loading
-WildCard 404
-Routes Module
-Event Binding
-Elvis Operator
-Unsubscribe RxJS
+- Pipes
+- CanLoad
+- Use Hash
+- CanActivate
+- Lazy Loading
+- WildCard 404
+- Routes Module
+- Event Binding
+- Elvis Operator
+- Unsubscribe RxJS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
 
